@@ -256,7 +256,9 @@
 				if (isset($_SESSION['msg'])) {
 					echo "<br>".$_SESSION['msg'];
 					unset($_SESSION['msg']);
-				}
+				}else{
+          echo("")
+        }
 			?>
         <div id='divLogin' class="navbar-brand d-flex align-items-center" style ="margin-left: 350px;">
             <form action="Login.php" method ="post" class="formsMinhaConta" id='formLogin'>

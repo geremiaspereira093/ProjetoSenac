@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require '../include/conectar.php';
+    require 'include/conectar.php';
     $consulta_remedios = " SELECT * FROM remedios";
     //var_dump($result_remedios);
     $result_Remedios = mysqli_query($connection, $consulta_remedios);   
@@ -256,9 +256,7 @@
 				if (isset($_SESSION['msg'])) {
 					echo "<br>".$_SESSION['msg'];
 					unset($_SESSION['msg']);
-				}else{
-          echo("")
-        }
+				}
 			?>
         <div id='divLogin' class="navbar-brand d-flex align-items-center" style ="margin-left: 350px;">
             <form action="Login.php" method ="post" class="formsMinhaConta" id='formLogin'>

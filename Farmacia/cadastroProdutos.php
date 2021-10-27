@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	require '../include/conectar.php';
+	require 'include/conectar.php';
 	
 	if(!empty($_POST)){
 		$produto=$_POST['txtNome'];

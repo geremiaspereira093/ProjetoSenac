@@ -1,8 +1,8 @@
 <?php
-     require '../include/conectar.php';
+     require 'include/conectar.php';
 
      if(empty($_POST['usuario']) || empty($_POST['senha'])){
-         header('Location: MinhaConta.php');
+         echo "<script>window.location.href = 'MinhaConta.php';</script>";
          exit();
      }
  
@@ -13,14 +13,15 @@
      $result = mysqli_query($connection,$consulta);
      $row = mysqli_num_rows($result);
 
-     if ($row == 1){
+     echo($row);
+
+     if ($row >0){
          $_SESSION['usuario'] = $usuario;
-         header('Location: pesquisarAdmin.php');
+         echo "<script>window.location.href = 'pesquisarAdmin.php';</script>";
          exit();
      }
      else{
-        $_SESSION['msg'] = "Preencha todos os campos!";
-        header('Location: MinhaConta.php');
+        echo "<script>window.location.href = 'MinhaConta.php';</script>";
         exit();
      }
 

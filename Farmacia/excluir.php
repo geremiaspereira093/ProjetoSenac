@@ -1,6 +1,6 @@
 <?php
 
-	require '../include/conectar.php';
+	require 'include/conectar.php';
 
 	$id = $_GET["id"];
 	

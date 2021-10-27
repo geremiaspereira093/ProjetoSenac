@@ -1,5 +1,5 @@
 <?php 
-    require '../include/conectar.php';
+    require 'include/conectar.php';
     $consulta_remedios = " SELECT * FROM remedios";
     //var_dump($result_remedios);
     $result_Remedios = mysqli_query($connection, $consulta_remedios);   
